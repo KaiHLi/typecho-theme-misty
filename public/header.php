@@ -63,7 +63,7 @@
     <div class="menu">
         <div  id="menu-list" class="menu-list">
             <li>
-                <a href="javascript:void(0)"  onclick="showMenuList(this)" >目录</a>
+                <a href="javascript:void(0)"  onclick="showMenuList(this)" >目錄</a>
                 <div class="menu-more hide" id="menu-more">
                     <ul>
                         <?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
@@ -99,6 +99,11 @@
                 }
                 ?>
             <?php endif; ?>
+            <li>
+            <?php if($this->options->plugin("ExSearch")):?>
+                    <a href="javascript:void(0)" class="search-form-input">搜索</a>
+            <?php endif; ?>
+            </li>
         </div>
     </div>
 </header>
